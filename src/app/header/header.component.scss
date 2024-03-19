@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    align-items: center;
+
+}
+.header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo{
+    max-height: 42px;
+    max-width: 42px;
+
+}
+.header .title-group{
+    padding-left: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.header .title-group i{
+    padding-right: 25px;
+    color: #7030a0;
+}
+.header .material-icons{
+    padding-top:10px;
+}
