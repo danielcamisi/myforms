@@ -1,12 +1,22 @@
-    <div class="">
+<div class="form-group">
+
+    <div class="title-group">
         <label for="title">TÍTULO</label>
+    </div>
+    <div style="padding:15px">
         <input name="nome" [(ngModel)]="title" type="string"/>
     </div>
-    <div>
+
+    <div style="padding:15px" class="description-group">
         <label for="description">DESCRIÇÃO</label>
-        <input name="nome" [(ngModel)]="description" type="string"/>
     </div>
-    <div>
-        <label for="image">APRESENTE UM PRINT DA SITUAÇÃO:</label>
+    <div style="padding:15px">
+        <textarea name="nome" [(ngModel)]="description" type="string"></textarea>
     </div>
-    <button mat-raised-button (click)="submit()" label="NOME button" ></button>
+
+        <!-- <label for="image">APRESENTE UM PRINT DA SITUAÇÃO:</label> -->
+
+    <div style="padding:15px" class="share-button-group">
+         <input type="submit" mat-raised-button (click)="submit()" value="{{btnText}}">
+        </div>
+</div>

@@ -20,6 +20,8 @@ import { NewMomentComponent } from './component/new-moment/new-moment.component'
 
 import { MatListItemIcon } from '@angular/material/list';
 
+import { ButtonModule } from 'primeng/button';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { MatListItemIcon } from '@angular/material/list';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatListItemIcon
+    MatListItemIcon,
+    ButtonModule
 
   ],
   providers: [
