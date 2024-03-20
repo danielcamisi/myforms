@@ -10,32 +10,37 @@ import { Validators } from '@angular/forms';
 export class MomentFormComponent implements OnInit{
   @Input() btnText!:string;
 
-  mommentForm!: FormGroup;
+  // mommentForm!: FormGroup;
+
+  title: string='';
+
+  description: string='';
 
   constructor() { }
 
   ngOnInit():void { 
-    this.mommentForm = new FormGroup({
-      id: new FormControl(''),
-      title: new FormControl('',[Validators.required]),
-      description: new FormControl('',[Validators.required]),
-      Image: new FormControl(''),
+    // this.mommentForm = new FormGroup({
+    //   id: new FormControl(''),
+    //   title: new FormControl('',[Validators.required]),
+    //   description: new FormControl('',[Validators.required]),
+    //   Image: new FormControl(''),
       
-    });
+    // });
   }
 
-  get title(){
-    return this.mommentForm.get('title')!;
-  }
+  // get title(){
+  //   return this.mommentForm.get('title')!;
+  // }
 
-  get description(){
-    return this.mommentForm.get('title')!;
-  }
+  // get description(){
+  //   return this.mommentForm.get('description')!;
+  // }
 
   submit(){
-    if(this.mommentForm.invalid){
-      return;
-    }
-    console.log("Enviou o feedback!")
+  if(this.title === ''){
+    console.log("Vazio")
+    return;
+  }
+    console.log("Enviou o feedback!", this.title, this.description)
   }
 }

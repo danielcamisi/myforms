@@ -17,10 +17,9 @@ import { MatListModule} from '@angular/material/list'
 
 import { MomentFormComponent } from './component/moment-form/moment-form.component';
 import { NewMomentComponent } from './component/new-moment/new-moment.component';
-import { ReturnComponentComponent } from './return-component/return-component.component';
 
 import { MatListItemIcon } from '@angular/material/list';
-import { HomeComponent } from './main/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -29,8 +28,6 @@ import { HomeComponent } from './main/home/home.component';
     FooterComponent,
     MomentFormComponent,
     NewMomentComponent,
-    ReturnComponentComponent,
-    HomeComponent
     
   ],
   imports: [
