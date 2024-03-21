@@ -14,7 +14,7 @@
                 <input type="file">
             </div>
 
-            <div *ngIf="title; else !title || !description; else description">
+            <div *ngIf="title || !description">
                 <a style="color: white">exemplo1</a>
             </div>
 
