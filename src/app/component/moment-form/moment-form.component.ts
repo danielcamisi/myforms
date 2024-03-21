@@ -36,11 +36,13 @@ export class MomentFormComponent implements OnInit{
   //   return this.mommentForm.get('description')!;
   // }
 
+
+
+
   submit(){
-  if(this.title === ''){
-    console.log("Vazio")
-    return;
-  }
-    console.log("Enviou o feedback!", this.title, this.description)
+  if(!this.title || this.description === ''){
+    console.log("Um dos dois campos obrigatórios não foram preenchidos!")
+  } else {
+    console.log("Feedback encaminhado!", this.title, this.description) }
   }
 }

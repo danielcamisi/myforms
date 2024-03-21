@@ -1,22 +1,25 @@
 <div class="form-group">
-
-    <div class="title-group">
+    <div class="title-group"> 
         <label for="title">TÍTULO</label>
-    </div>
-    <div style="padding:15px">
-        <input name="nome" [(ngModel)]="title" type="string"/>
+        <input name="nome" placeholder="Escreva seu título" [(ngModel)]="title" type="string"/>
     </div>
 
-    <div style="padding:15px" class="description-group">
-        <label for="description">DESCRIÇÃO</label>
-    </div>
-    <div style="padding:15px">
-        <textarea name="nome" [(ngModel)]="description" type="string"></textarea>
-    </div>
-
-        <!-- <label for="image">APRESENTE UM PRINT DA SITUAÇÃO:</label> -->
-
-    <div style="padding:15px" class="share-button-group">
-         <input type="submit" mat-raised-button (click)="submit()" value="{{btnText}}">
+        <div class="description-group">
+          <label for="description">DESCRIÇÃO</label>    
+          <textarea placeholder="Descreva sua experiência" name="nome" [(ngModel)]="description" type="string"></textarea>
         </div>
+
+            <div class="file-group">
+                <label for="image">APRESENTE UM PRINT DA SITUAÇÃO:</label>
+                <input type="file">
+            </div>
+
+            <div *ngIf="title; else !title || !description; else description">
+                <a style="color: white">exemplo1</a>
+            </div>
+
+                <div class="button-group">
+                    <input type="submit" mat-raised-button (click)="submit()" value="{{btnText}}">
+                </div>
+            
 </div>

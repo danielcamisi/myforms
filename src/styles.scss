@@ -13,19 +13,6 @@ form{
     width: 500px;
     margin: 0 auto;
 }
-.form-group{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-    align-items: center;
-    align-content: baseline;
-}
-.form-group input, .form-group textarea{
-    padding: .6em;
-    color: #7030a0;
-    font-size: 0.8em;
-}
-
 
 input[type="submit"]{
     background-color: #a567d4;
