@@ -45,9 +45,6 @@ export class MomentFormComponent implements OnInit{
   //   return this.mommentForm.get('description')!;
   // }
 
-
-
-
   submit():void{
     
   if(!this.title || this.description === ''){
