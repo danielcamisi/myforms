@@ -20,7 +20,12 @@ import { NewMomentComponent } from './component/new-moment/new-moment.component'
 
 import { MatListItemIcon } from '@angular/material/list';
 
-import { ButtonModule } from 'primeng/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
+import { Dialog2Component } from './dialog2/dialog2.component';
+
+
+
 
 
 
@@ -31,6 +36,9 @@ import { ButtonModule } from 'primeng/button';
     FooterComponent,
     MomentFormComponent,
     NewMomentComponent,
+    DialogComponent,
+    Dialog2Component,
+    
     
   ],
   imports: [
@@ -45,7 +53,7 @@ import { ButtonModule } from 'primeng/button';
     FormsModule,
     ReactiveFormsModule,
     MatListItemIcon,
-    ButtonModule
+    MatDialogModule
 
   ],
   providers: [

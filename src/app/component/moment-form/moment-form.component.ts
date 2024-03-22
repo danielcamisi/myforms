@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../../dialog/dialog.component';
+import { Dialog2Component } from '../../dialog2/dialog2.component';
+
+
 
 @Component({
   selector: 'app-moment-form',
@@ -13,10 +16,14 @@ export class MomentFormComponent implements OnInit{
   // mommentForm!: FormGroup;
 
   title: string='';
-
+  
   description: string='';
 
-  constructor() { }
+  constructor(
+    public dialog:MatDialog
+  ) {  }
+
+   
 
   ngOnInit():void { 
     // this.mommentForm = new FormGroup({
@@ -27,6 +34,8 @@ export class MomentFormComponent implements OnInit{
       
     // });
   }
+
+
 
   // get title(){
   //   return this.mommentForm.get('title')!;
@@ -39,10 +48,18 @@ export class MomentFormComponent implements OnInit{
 
 
 
-  submit(){
+  submit():void{
+    
   if(!this.title || this.description === ''){
+    this.dialog.open(DialogComponent)
     console.log("Um dos dois campos obrigatórios não foram preenchidos!")
   } else {
+    this.dialog.open(Dialog2Component)
     console.log("Feedback encaminhado!", this.title, this.description) }
   }
 }
+
+
+ 
+
+

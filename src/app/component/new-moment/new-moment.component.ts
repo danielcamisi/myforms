@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-new-moment',
   templateUrl: './new-moment.component.html',
@@ -8,10 +9,13 @@ import { Component } from '@angular/core';
 export class NewMomentComponent {
   btnText = 'Compartilhar';
 
-  constructor(){
+  constructor(
+
+  ){
 
   }
   NgOnInit(): void{
 
   }
 }
+

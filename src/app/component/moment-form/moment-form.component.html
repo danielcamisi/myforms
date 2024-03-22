@@ -1,11 +1,11 @@
 <div class="form-group">
     <div class="title-group"> 
-        <label for="title">TÍTULO</label>
+        <label for="title">TÍTULO*</label>
         <input name="nome" placeholder="Escreva seu título" [(ngModel)]="title" type="string"/>
     </div>
 
         <div class="description-group">
-          <label for="description">DESCRIÇÃO</label>    
+          <label for="description">DESCRIÇÃO*</label>    
           <textarea placeholder="Descreva sua experiência" name="nome" [(ngModel)]="description" type="string"></textarea>
         </div>
 
@@ -14,9 +14,6 @@
                 <input type="file">
             </div>
 
-            <div *ngIf="title || !description">
-                <a style="color: white">exemplo1</a>
-            </div>
 
                 <div class="button-group">
                     <input type="submit" mat-raised-button (click)="submit()" value="{{btnText}}">
